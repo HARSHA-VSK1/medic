@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.rowC{display:flex; flex-direction:row;justify-content: space-between;}
+.rowr{display:flex; flex-direction:column;border-radius: 10px;}
+
+.chart{
+  margin-right: 100px;
+  justify-content: center;
+  max-width: 500px;
 }
