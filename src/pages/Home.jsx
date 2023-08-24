@@ -18,14 +18,14 @@ function Home() {
               <Lottie className='w-5xl' animationData={animation}/>
         </div> 
 
-          <div 
+          <motion.div initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
                   className="max-h-[35rem] overflow-hidden w-3/5 text-blue-400 border-2 bg-[#f9fafe] rounded-lg">
-            <motion.img initial={{y:900}}
-                      animate={{y:0}} transition={{duration:2}} src={img1} className=" pl-24 pr-24" />
-              <motion.div initial={{y:900}}
-                      animate={{y:0}} transition={{duration:2}} className='pl-96'>
+            <img src={img1} className=" pl-24 pr-24" />
+              <div className='pl-96'>
                 <Link to="/input-page" className=' w-1/2 bg-blue-500 hover:bg-blue-700 mb-12 text-white font-bold text-md py-2 px-4 rounded-lg'><a href="Inputdata">Import data</a></Link>
-              </motion.div>
+              </div>
               <div className='max-h-50px'>
                   <TypeAnimation className='pl-12 mt-8 text-lg font-mono'
                   style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
@@ -43,7 +43,7 @@ function Home() {
               </div>
             
              
-          </div>
+          </motion.div>
          
           </div>
     </section>
